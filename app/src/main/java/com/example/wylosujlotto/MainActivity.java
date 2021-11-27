@@ -44,8 +44,9 @@ public class MainActivity extends AppCompatActivity {
             int[] wynikLosowania = new int[liczbaLosowanychInt];
             for(int i = 0; i<liczbaLosowanychInt; i++){
                 int wylosowana = 0;
-                boolean jestPowotorzony = false;
+                boolean jestPowotorzony;
                 do {
+                    jestPowotorzony = false;
                     wylosowana = (int) (Math.random() * liczbaKulInt + 1);
                     for(int j=0; j<i; j++){
                         if(wylosowana==wynikLosowania[j]){
