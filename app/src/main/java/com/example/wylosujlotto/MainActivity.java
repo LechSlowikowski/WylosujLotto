@@ -7,13 +7,34 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
+/********************************************************
+ * nazwa klasy: MainActivity
+ * parametry wejściowe: brak
+ * wartość zwracana: brak
+ * autor: 45678901234
+ * ****************************************************/
 public class MainActivity extends AppCompatActivity {
 
+    /********************************************************
+     * nazwa funkcji: onCreate
+     * parametry wejściowe: savedInstanceState - prametr uruchomieniowy
+     * wartość zwracana: brak
+     * opis: główna funkcja uruchomieniowa
+     * autor: 45678901234
+     * ****************************************************/
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
+
+    /********************************************************
+     * nazwa funkcji: wylosuj
+     * parametry wejściowe: view - widok, na którym wykonywana jest obsługa zdarzenia
+     * wartość zwracana: brak
+     * opis: obsługa naciśnięcia przycisku Wylosuj
+     * autor: 45678901234
+     * ****************************************************/
 
     public void wylosuj(View view) {
         String komunikatStr = "";
@@ -65,7 +86,5 @@ public class MainActivity extends AppCompatActivity {
 
         TextView komunikat = (TextView) findViewById(R.id.komunikt);
         komunikat.setText(komunikatStr);
-
-
     }
 }
