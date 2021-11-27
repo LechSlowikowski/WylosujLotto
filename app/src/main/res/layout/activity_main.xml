@@ -40,7 +40,7 @@
         android:layout_height="wrap_content"
         android:hint="Ile liczb losujemy"
         android:inputType="number"
-        android:imeOptions="actionNext" />
+        android:imeOptions="actionDone" />
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

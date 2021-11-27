@@ -43,7 +43,17 @@ public class MainActivity extends AppCompatActivity {
         if(komunikatStr.length()==0) {
             int[] wynikLosowania = new int[liczbaLosowanychInt];
             for(int i = 0; i<liczbaLosowanychInt; i++){
-                int wylosowana = (int) (Math.random() * liczbaKulInt + 1);
+                int wylosowana = 0;
+                boolean jestPowotorzony = false;
+                do {
+                    wylosowana = (int) (Math.random() * liczbaKulInt + 1);
+                    for(int j=0; j<i; j++){
+                        if(wylosowana==wynikLosowania[j]){
+                            jestPowotorzony = true;
+                        }
+                    }
+
+                } while(jestPowotorzony);
                 wynikLosowania[i] = wylosowana;
             }
             komunikatStr = "Wynik losowania: ";
